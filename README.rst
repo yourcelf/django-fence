@@ -27,13 +27,19 @@ Get it into your path.  This ought to work::
 Usage
 ~~~~~
 
-Add `fence` to your `INSTALLED_APPS`, and then add a setting `FENCE_TOKEN` which contains the magic word that visitors must enter.
+1. Add `fence` to `INSTALLED_APPS`::
 
-Next, create a template displaying the auth form:
+    INSTALLED_APPS += ('fence',)
 
-    `forms/say_the_magic_word.html`
+2. Add middleware::
 
-An example template::
+    MIDDLEWARE_CLASSES += ("fence.middleware.Fence",)
+
+3. Define the magic word::
+
+    FENCE_TOKEN = "secret"
+    
+4. Create a template to display in `fence/say_the_magic_word.html`.  An example template::
 
     {% extends "base.html" %}
 
@@ -49,11 +55,6 @@ An example template::
         </form>
 
     {% endblock %}
-
-Status
-~~~~~~
-
-This is brand new, not battle or production tested, and possibly buggy still.
 
 License
 ~~~~~~~
