@@ -5,3 +5,7 @@ pip-log.txt
 .DS_Store*
 *~
 *.mo
+
+deploy.sh
+*.egg-info
+dist/
