@@ -27,7 +27,7 @@ Get it into your path.  This ought to work::
 Usage
 ~~~~~
 
-1. Add `fence` to `INSTALLED_APPS`::
+1. Add ``fence`` to ``INSTALLED_APPS``::
 
     INSTALLED_APPS += ('fence',)
 
@@ -39,7 +39,7 @@ Usage
 
     FENCE_TOKEN = "secret"
     
-4. Create a template to display in `fence/say_the_magic_word.html`.  An example template::
+4. Create a template to display in ``fence/say_the_magic_word.html``.  An example template::
 
     {% extends "base.html" %}
 
